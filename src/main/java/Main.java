@@ -7,18 +7,23 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+/*
+  Note that you may need to disable outbound SMTP filtering by your antivirus
+  You will also need an application password from Google
+  Link to information regarding these passwords: https://support.google.com/accounts/answer/185833?hl=en
+ */
 public class Main {
 
   public static void main(String[] args) {
 
     // Change recipient email address here //
-    String recipient = "to@gmail.com";
+    String recipient = "recipient@gmail.com";
 
     // Change sender email address here //
-    String sender = "from@gmail.com";
+    String sender = "sender@gmail.com";
 
     // Change sender email password here //
-    String password = "password";
+    String password = "password_here";
 
     // Gmail smtp host //
     String host = "smtp.gmail.com";
@@ -52,8 +57,8 @@ public class Main {
       MimeMessage message = new MimeMessage(session);
       message.setFrom(new InternetAddress(sender));
       message.addRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
-      message.setSubject("Party");
-      message.setText("Please see attached file");
+      message.setSubject("This is a test");
+      message.setText("Testing the Java Mail API");
 
       // Prints when the email is attempting to send //
       System.out.println("Sending message...");
