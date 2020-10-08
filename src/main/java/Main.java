@@ -8,10 +8,10 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 /*
-  Note that you may need to disable outbound SMTP filtering by your antivirus
-  You will also need an application password from Google
-  Link to information regarding these passwords: https://support.google.com/accounts/answer/185833?hl=en
- */
+ Note that you may need to disable outbound SMTP filtering by your antivirus
+ You will also need an application password from Google
+ Link to information regarding these passwords: https://support.google.com/accounts/answer/185833?hl=en
+*/
 public class Main {
 
   public static void main(String[] args) {
